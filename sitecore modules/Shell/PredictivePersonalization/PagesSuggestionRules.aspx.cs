@@ -37,10 +37,10 @@ namespace Sitecore.PredictivePersonalization.View
                                   orderby r.RequiredPagesPercentage descending
                                   select new
                                   {
-                                    RequiredPages = string.Join(",\r\n", r.RequiredPages),
-                                    SuggestedPages = string.Join(",\r\n", r.SuggestedPages),
-                                    RequiredPagesPercentage = r.RequiredPagesPercentage.ToString("F3") + "%",
-                                    RuleSuccessPercentage = r.RuleSuccessPercentage.ToString("F3") + "%",
+                                    IfPagesVisited = string.Join(",\r\n", r.RequiredPages),
+                                    RecommendedPages = string.Join(",\r\n", r.SuggestedPages),
+                                    IfPagesPercentage = r.RequiredPagesPercentage.ToString("F3") + "%",
+                                    RuleWasSuccessPercentage = r.RuleSuccessPercentage.ToString("F3") + "%",
                                     RuleConfidence = (r.RuleConfidence * 100).ToString("F0") + "%"
                                   };
 
